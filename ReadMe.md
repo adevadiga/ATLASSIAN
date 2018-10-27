@@ -2,9 +2,14 @@
 
 Local Development Set-up:
 
-1. Build simple node js server to mock Jira Service
-2. Build graze/sqs-local as local docker image
-3. Start Spring Boot APP to server end-point /rest/api/2/search?q={search_query}
+Locally we can run a simple nodejs server to mock Jira service and run graze/sqs-local as mock SQS end-point.
+
+The feature has been developed as a Spring Boot APP exposing Rest end-point
+
+Steps to run in local
+        1. Build simple node js server to mock Jira Service
+        2. Build graze/sqs-local as local docker image
+        3. Start Spring Boot APP to server end-point /rest/api/2/search?q={search_query}
 
 
 1. Ensure Docker is running on your machine.
