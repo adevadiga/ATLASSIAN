@@ -1,0 +1,778 @@
+2018-10-27 00:35:09,078 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:35:52,216 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:35:57,276 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:36:14,395 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 00:36:14,395 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 00:36:14,493 ERROR com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Error while querying data from Jira service
+java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:225)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at retrofit2.OkHttpCall.execute(OkHttpCall.java:180)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:40)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:24)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:36)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:66)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:38)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:45)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:48)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:27)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10423)
+	at rx.Observable.subscribe(Observable.java:10390)
+	at rx.Observable.subscribe(Observable.java:10195)
+	at com.anoop.cst.services.StoryPointProcessorService.transform(StoryPointProcessorService.java:47)
+	at com.anoop.cst.controller.JiraController.index(JiraController.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:124)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:223)
+	... 95 common frames omitted
+2018-10-27 00:36:14,495 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=100
+2018-10-27 00:38:01,780 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:38:07,678 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:38:16,995 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 00:38:16,996 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 00:38:17,110 ERROR com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Error while querying data from Jira service
+java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:225)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at retrofit2.OkHttpCall.execute(OkHttpCall.java:180)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:40)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:24)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:36)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:66)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:38)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:45)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:48)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:27)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10423)
+	at rx.Observable.subscribe(Observable.java:10390)
+	at rx.Observable.subscribe(Observable.java:10195)
+	at com.anoop.cst.services.StoryPointProcessorService.transform(StoryPointProcessorService.java:47)
+	at com.anoop.cst.controller.JiraController.index(JiraController.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:124)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:223)
+	... 95 common frames omitted
+2018-10-27 00:38:17,113 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] hell oh yeah. {}-1
+2018-10-27 00:38:17,114 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=-1
+2018-10-27 00:38:17,172 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=177
+2018-10-27 00:38:47,318 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:38:53,210 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 00:39:01,541 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 00:39:01,542 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 00:39:01,653 ERROR com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Error while querying data from Jira service
+java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:225)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at retrofit2.OkHttpCall.execute(OkHttpCall.java:180)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:40)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:24)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:36)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:66)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:38)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:45)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:48)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:27)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10423)
+	at rx.Observable.subscribe(Observable.java:10390)
+	at rx.Observable.subscribe(Observable.java:10195)
+	at com.anoop.cst.services.StoryPointProcessorService.transform(StoryPointProcessorService.java:47)
+	at com.anoop.cst.controller.JiraController.index(JiraController.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:124)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:223)
+	... 95 common frames omitted
+2018-10-27 00:39:01,655 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=114
+2018-10-27 01:08:37,308 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 01:08:49,165 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5001
+2018-10-27 01:18:21,219 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:18:21,221 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 01:18:21,443 ERROR com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Error while querying data from Jira service
+java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:225)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at retrofit2.OkHttpCall.execute(OkHttpCall.java:180)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:40)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:24)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:36)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:66)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:38)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:45)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:48)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:27)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:48)
+	at rx.internal.operators.OnSubscribeLift.call(OnSubscribeLift.java:30)
+	at rx.Observable.subscribe(Observable.java:10423)
+	at rx.Observable.subscribe(Observable.java:10390)
+	at rx.Observable.subscribe(Observable.java:10195)
+	at com.anoop.cst.services.StoryPointProcessorService.transform(StoryPointProcessorService.java:46)
+	at com.anoop.cst.controller.JiraController.index(JiraController.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:124)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:223)
+	... 95 common frames omitted
+2018-10-27 01:18:21,448 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=229
+2018-10-27 01:18:48,872 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:18:59,009 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:19:04,540 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:19:04,541 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 01:19:04,697 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] hell oh yeah. {}8
+2018-10-27 01:19:04,698 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:19:04,755 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Sucks... DOne
+2018-10-27 01:19:04,756 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=216
+2018-10-27 01:19:50,202 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:19:50,203 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-3] Started making call to Jira service with query="aaa"
+2018-10-27 01:19:50,208 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] hell oh yeah. {}8
+2018-10-27 01:19:50,209 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:19:50,227 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Sucks... DOne
+2018-10-27 01:19:50,227 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=25
+2018-10-27 01:19:57,764 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:19:57,765 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-5] Started making call to Jira service with query="aaa"
+2018-10-27 01:19:57,767 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] hell oh yeah. {}8
+2018-10-27 01:19:57,768 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:19:57,788 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Sucks... DOne
+2018-10-27 01:19:57,788 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=24
+2018-10-27 01:20:19,695 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:20:27,567 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:20:32,388 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:20:32,388 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 01:20:32,501 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] hell oh yeah. {}8
+2018-10-27 01:20:32,501 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:20:32,502 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Inside thread
+2018-10-27 01:20:32,502 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Sucks... DOne
+2018-10-27 01:20:32,503 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=115
+2018-10-27 01:20:32,562 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Thread finished
+2018-10-27 01:23:01,142 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:23:08,263 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:23:58,540 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:23:58,541 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 01:23:58,650 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] hell oh yeah. {}8
+2018-10-27 01:23:58,650 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:23:58,650 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Sync No
+2018-10-27 01:23:58,687 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Sucks... DOne
+2018-10-27 01:23:58,688 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=148
+2018-10-27 01:24:09,388 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:24:09,389 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-3] Started making call to Jira service with query="aaa"
+2018-10-27 01:24:09,395 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] hell oh yeah. {}8
+2018-10-27 01:24:09,395 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:24:09,396 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Sync No
+2018-10-27 01:24:09,415 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] Sucks... DOne
+2018-10-27 01:24:09,415 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-3] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=27
+2018-10-27 01:24:20,153 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:24:20,154 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-5] Started making call to Jira service with query="aaa"
+2018-10-27 01:24:20,157 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] hell oh yeah. {}8
+2018-10-27 01:24:20,158 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:24:20,158 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Sync Yes
+2018-10-27 01:24:20,159 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Inside thread
+2018-10-27 01:24:20,159 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] Sucks... DOne
+2018-10-27 01:24:20,160 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-5] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=7
+2018-10-27 01:24:20,179 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Thread finished
+2018-10-27 01:24:31,516 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-7] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:24:31,516 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-7] Started making call to Jira service with query="aaa"
+2018-10-27 01:24:31,521 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-7] hell oh yeah. {}8
+2018-10-27 01:24:31,521 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-7] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:24:31,522 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-7] Sync Yes
+2018-10-27 01:24:31,522 INFO com.anoop.cst.services.SQSService$1 [cst_thread2] Sucks... Inside thread
+2018-10-27 01:24:31,522 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-7] Sucks... DOne
+2018-10-27 01:24:31,522 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-7] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=6
+2018-10-27 01:24:31,541 INFO com.anoop.cst.services.SQSService$1 [cst_thread2] Sucks... Thread finished
+2018-10-27 01:24:37,905 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-9] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:24:37,906 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-9] Started making call to Jira service with query="aaa"
+2018-10-27 01:24:37,910 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-9] hell oh yeah. {}8
+2018-10-27 01:24:37,911 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-9] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:24:37,911 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-9] Sync No
+2018-10-27 01:24:37,926 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-9] Sucks... DOne
+2018-10-27 01:24:37,927 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-9] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=22
+2018-10-27 01:24:42,722 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-2] Started processing Jira, query="aaa", name="Anoop2"
+2018-10-27 01:24:42,722 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-2] Started making call to Jira service with query="aaa"
+2018-10-27 01:24:42,726 DEBUG com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-2] hell oh yeah. {}8
+2018-10-27 01:24:42,726 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-2] Started pushing the message to Queue, name="Anoop2", totalStoryPoint=8
+2018-10-27 01:24:42,726 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-2] Sync No
+2018-10-27 01:24:42,741 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-2] Sucks... DOne
+2018-10-27 01:24:42,741 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-2] interaction=StoryPointProcessorService-interaction; operation=writeOne; status=success; executionTime=19
+2018-10-27 01:25:23,610 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 01:25:31,123 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 10:17:20,154 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 10:17:26,479 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 10:18:46,574 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:18:46,576 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 10:18:46,869 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=postMessageToQueue; for query="Anoop2"; descrption=8
+2018-10-27 10:18:46,870 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Inside thread
+2018-10-27 10:18:46,870 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=postMessageToQueue; status=success; executionTime=1
+2018-10-27 10:18:46,874 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=298
+2018-10-27 10:18:46,997 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Thread finished
+2018-10-27 10:24:18,532 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 10:24:25,449 INFO com.anoop.cst.services.JiraService [main] Property value. JiraBaseURL=http://localhost:5000
+2018-10-27 10:24:37,469 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:24:37,470 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Started making call to Jira service with query="aaa"
+2018-10-27 10:24:37,628 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=postMessageToQueue; for query="Anoop2"; descrption=8
+2018-10-27 10:24:37,629 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Inside thread
+2018-10-27 10:24:37,629 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=postMessageToQueue; status=success; executionTime=1
+2018-10-27 10:24:37,632 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=162
+2018-10-27 10:24:37,702 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Sucks... Thread finished
+2018-10-27 10:30:24,922 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5000
+2018-10-27 10:30:30,839 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5000
+2018-10-27 10:30:41,631 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:30:41,632 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Invoking Jira API with query="aaa"
+2018-10-27 10:30:41,796 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=postMessageToQueue; for query="Anoop2"; descrption=8
+2018-10-27 10:30:41,796 INFO com.anoop.cst.services.SQSService [http-nio-8080-exec-1] Invoking SQS API with message=com.anoop.cst.models.Message@3239eee9
+2018-10-27 10:30:41,797 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Started thread={threadId} to push message SQS
+2018-10-27 10:30:41,797 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=postMessageToQueue; status=success; executionTime=1
+2018-10-27 10:30:41,798 INFO com.anoop.cst.services.SQSService [cst_thread1] Invoking SQS API with message=com.anoop.cst.models.Message@3239eee9
+2018-10-27 10:30:41,800 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=168
+2018-10-27 10:30:41,850 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Finished pushing message to queue for thread={threadId}
+2018-10-27 10:32:23,756 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5000
+2018-10-27 10:32:30,053 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5000
+2018-10-27 10:32:31,355 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:32:31,356 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Invoking Jira API with query="aaa"
+2018-10-27 10:32:31,476 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=postMessageToQueue; for query="Anoop2"; descrption=8
+2018-10-27 10:32:31,477 INFO com.anoop.cst.services.SQSService [http-nio-8080-exec-1] Invoking SQS API with message=com.anoop.cst.models.Message@75872b8c
+2018-10-27 10:32:31,478 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Started thread=38 to push message SQS
+2018-10-27 10:32:31,478 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=postMessageToQueue; status=success; executionTime=2
+2018-10-27 10:32:31,478 INFO com.anoop.cst.services.SQSService [cst_thread1] Invoking SQS API with message=com.anoop.cst.models.Message@75872b8c
+2018-10-27 10:32:31,480 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=124
+2018-10-27 10:32:31,530 INFO com.anoop.cst.services.SQSService$1 [cst_thread1] Finished pushing message to queue for thread=38
+2018-10-27 10:33:00,858 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:33:07,431 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:33:26,606 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:33:26,606 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Invoking Jira API with query="aaa"
+2018-10-27 10:33:26,723 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=117
+2018-10-27 10:35:38,378 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:35:45,005 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:35:57,972 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:35:57,972 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Invoking Jira API with query="aaa"
+2018-10-27 10:35:58,092 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=120
+2018-10-27 10:36:40,217 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:36:46,202 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:37:02,685 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:37:02,686 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Invoking Jira API with query="aaa"
+2018-10-27 10:37:02,812 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=126
+2018-10-27 10:39:52,469 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:39:58,628 INFO com.anoop.cst.services.JiraService [main] Initilizing JiaService API with JiraBaseURL=http://localhost:5001
+2018-10-27 10:40:18,144 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Access event: operation=transform; for query="aaa"; descrption="Anoop2"
+2018-10-27 10:40:18,147 INFO com.anoop.cst.services.JiraService [http-nio-8080-exec-1] Invoking Jira API with query="aaa"
+2018-10-27 10:40:18,248 ERROR com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] Error
+rx.exceptions.CompositeException: 2 exceptions occurred. 
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:84)
+	at rx.internal.operators.OnSubscribeRedo$4$1.onError(OnSubscribeRedo.java:326)
+	at rx.internal.operators.OperatorDematerialize$1.onError(OperatorDematerialize.java:77)
+	at rx.internal.operators.OperatorDematerialize$1.onNext(OperatorDematerialize.java:62)
+	at rx.internal.operators.OperatorDematerialize$1.onNext(OperatorDematerialize.java:50)
+	at rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:77)
+	at rx.internal.operators.OnSubscribeRedo$3$1.onNext(OnSubscribeRedo.java:302)
+	at rx.internal.operators.OnSubscribeRedo$3$1.onNext(OnSubscribeRedo.java:284)
+	at rx.internal.operators.NotificationLite.accept(NotificationLite.java:135)
+	at rx.subjects.SubjectSubscriptionManager$SubjectObserver.emitNext(SubjectSubscriptionManager.java:253)
+	at rx.subjects.BehaviorSubject.onNext(BehaviorSubject.java:160)
+	at rx.observers.SerializedObserver.onNext(SerializedObserver.java:91)
+	at rx.subjects.SerializedSubject.onNext(SerializedSubject.java:67)
+	at rx.internal.operators.OnSubscribeRedo$2$1.onError(OnSubscribeRedo.java:237)
+	at rx.internal.operators.OnSubscribeReduce$ReduceSubscriber.onError(OnSubscribeReduce.java:95)
+	at rx.internal.operators.OnSubscribeMap$MapSubscriber.onError(OnSubscribeMap.java:88)
+	at rx.internal.operators.OnSubscribeFilter$FilterSubscriber.onError(OnSubscribeFilter.java:90)
+	at rx.internal.operators.OnSubscribeFlattenIterable$FlattenIterableSubscriber.checkTerminated(OnSubscribeFlattenIterable.java:300)
+	at rx.internal.operators.OnSubscribeFlattenIterable$FlattenIterableSubscriber.drain(OnSubscribeFlattenIterable.java:177)
+	at rx.internal.operators.OnSubscribeFlattenIterable$FlattenIterableSubscriber.onError(OnSubscribeFlattenIterable.java:135)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe$BodySubscriber.onError(BodyOnSubscribe.java:71)
+	at retrofit2.adapter.rxjava.CallArbiter.emitError(CallArbiter.java:159)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:43)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:24)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:36)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe.call(BodyOnSubscribe.java:28)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:66)
+	at rx.internal.operators.OnSubscribeFlattenIterable.call(OnSubscribeFlattenIterable.java:38)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:45)
+	at rx.internal.operators.OnSubscribeFilter.call(OnSubscribeFilter.java:30)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:48)
+	at rx.internal.operators.OnSubscribeMap.call(OnSubscribeMap.java:33)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:48)
+	at rx.internal.operators.OnSubscribeReduce.call(OnSubscribeReduce.java:27)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeRedo$2.call(OnSubscribeRedo.java:273)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.enqueue(TrampolineScheduler.java:73)
+	at rx.internal.schedulers.TrampolineScheduler$InnerCurrentThreadScheduler.schedule(TrampolineScheduler.java:52)
+	at rx.internal.operators.OnSubscribeRedo$5.request(OnSubscribeRedo.java:361)
+	at rx.Subscriber.setProducer(Subscriber.java:209)
+	at rx.Subscriber.setProducer(Subscriber.java:205)
+	at rx.Subscriber.setProducer(Subscriber.java:205)
+	at rx.internal.operators.OnSubscribeRedo.call(OnSubscribeRedo.java:353)
+	at rx.internal.operators.OnSubscribeRedo.call(OnSubscribeRedo.java:47)
+	at rx.Observable.unsafeSubscribe(Observable.java:10327)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:41)
+	at rx.internal.operators.OnSubscribeDoOnEach.call(OnSubscribeDoOnEach.java:30)
+	at rx.Observable.subscribe(Observable.java:10423)
+	at rx.Observable.subscribe(Observable.java:10390)
+	at rx.Observable.subscribe(Observable.java:10230)
+	at com.anoop.cst.services.StoryPointProcessorService.transform(StoryPointProcessorService.java:44)
+	at com.anoop.cst.controller.JiraController.index(JiraController.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:866)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: rx.exceptions.CompositeException$CompositeExceptionCausalChain: Chain of Causes for CompositeException In Order Received =>
+	at rx.exceptions.CompositeException.getCause(CompositeException.java:129)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:57)
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.error(Logger.java:538)
+	at com.anoop.cst.services.StoryPointProcessorService.lambda$3(StoryPointProcessorService.java:45)
+	at rx.internal.util.ActionSubscriber.onError(ActionSubscriber.java:44)
+	at rx.observers.SafeSubscriber._onError(SafeSubscriber.java:153)
+	at rx.observers.SafeSubscriber.onError(SafeSubscriber.java:115)
+	... 110 common frames omitted
+Caused by: java.net.ConnectException: Failed to connect to localhost/0:0:0:0:0:0:0:1:5001
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:225)
+	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:149)
+	at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:192)
+	at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:121)
+	at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:100)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:120)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:92)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:67)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:185)
+	at okhttp3.RealCall.execute(RealCall.java:69)
+	at retrofit2.OkHttpCall.execute(OkHttpCall.java:180)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:40)
+	... 87 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:124)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:223)
+	... 106 common frames omitted
+Caused by: com.anoop.cst.exceptions.CSTJiraException: Failed to connect to localhost/0:0:0:0:0:0:0:1:5001
+	at com.anoop.cst.services.StoryPointProcessorService.lambda$1(StoryPointProcessorService.java:42)
+	at rx.internal.util.ActionObserver.onError(ActionObserver.java:44)
+	at rx.internal.operators.OnSubscribeDoOnEach$DoOnEachSubscriber.onError(OnSubscribeDoOnEach.java:81)
+	at rx.internal.operators.OnSubscribeRedo$4$1.onError(OnSubscribeRedo.java:326)
+	at rx.internal.operators.OperatorDematerialize$1.onError(OperatorDematerialize.java:77)
+	at rx.internal.operators.OperatorDematerialize$1.onNext(OperatorDematerialize.java:62)
+	at rx.internal.operators.OperatorDematerialize$1.onNext(OperatorDematerialize.java:50)
+	at rx.internal.operators.OnSubscribeMap$MapSubscriber.onNext(OnSubscribeMap.java:77)
+	at rx.internal.operators.OnSubscribeRedo$3$1.onNext(OnSubscribeRedo.java:302)
+	at rx.internal.operators.OnSubscribeRedo$3$1.onNext(OnSubscribeRedo.java:284)
+	at rx.internal.operators.NotificationLite.accept(NotificationLite.java:135)
+	at rx.subjects.SubjectSubscriptionManager$SubjectObserver.emitNext(SubjectSubscriptionManager.java:253)
+	at rx.subjects.BehaviorSubject.onNext(BehaviorSubject.java:160)
+	at rx.observers.SerializedObserver.onNext(SerializedObserver.java:91)
+	at rx.subjects.SerializedSubject.onNext(SerializedSubject.java:67)
+	at rx.internal.operators.OnSubscribeRedo$2$1.onError(OnSubscribeRedo.java:237)
+	at rx.internal.operators.OnSubscribeReduce$ReduceSubscriber.onError(OnSubscribeReduce.java:95)
+	at rx.internal.operators.OnSubscribeMap$MapSubscriber.onError(OnSubscribeMap.java:88)
+	at rx.internal.operators.OnSubscribeFilter$FilterSubscriber.onError(OnSubscribeFilter.java:90)
+	at rx.internal.operators.OnSubscribeFlattenIterable$FlattenIterableSubscriber.checkTerminated(OnSubscribeFlattenIterable.java:300)
+	at rx.internal.operators.OnSubscribeFlattenIterable$FlattenIterableSubscriber.drain(OnSubscribeFlattenIterable.java:177)
+	at rx.internal.operators.OnSubscribeFlattenIterable$FlattenIterableSubscriber.onError(OnSubscribeFlattenIterable.java:135)
+	at retrofit2.adapter.rxjava.BodyOnSubscribe$BodySubscriber.onError(BodyOnSubscribe.java:71)
+	at retrofit2.adapter.rxjava.CallArbiter.emitError(CallArbiter.java:159)
+	at retrofit2.adapter.rxjava.CallExecuteOnSubscribe.call(CallExecuteOnSubscribe.java:43)
+	... 87 common frames omitted
+2018-10-27 10:40:18,254 INFO com.anoop.cst.services.StoryPointProcessorService [http-nio-8080-exec-1] interaction=StoryPointProcessorService-interaction; operation=transform; status=success; executionTime=107

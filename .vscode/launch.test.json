@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "processJira",
+                "projectName": "processJira",
+                "workingDirectory": "/Users/adevadiga/anoopdev/ATLASSIAN/processJira",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "processJira",
+                "projectName": "processJira",
+                "workingDirectory": "/Users/adevadiga/anoopdev/ATLASSIAN/processJira",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
