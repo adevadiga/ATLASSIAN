@@ -1,6 +1,6 @@
 
 
-## Local Development Set-up:
+## Running application locally:
 
 The feature has been developed as a Spring Boot APP exposing Rest end-point at /rest/api/2/search?q={search_query}`
 
@@ -26,6 +26,6 @@ Spring profile "default" assumes locally running Jira and SQS service.
 Where as Spring profile "prod" runs as a prod environment set-up.
 
 
-## Prod Development Set-up:
+## Running application as in prod:
 
 mvn spring-boot:run -Dspring.profiles.active=prod -DJIRA_BASE_URL=<JiraBaseURL> -DQUEUE_URL=<SQSQueueURL>
