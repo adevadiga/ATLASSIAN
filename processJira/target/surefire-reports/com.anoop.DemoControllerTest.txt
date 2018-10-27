@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.anoop.DemoControllerTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.371 s - in com.anoop.DemoControllerTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.472 s <<< FAILURE! - in com.anoop.DemoControllerTest
+getHello(com.anoop.DemoControllerTest)  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'SQSClientWrapper' defined in file [/Users/adevadiga/anoopdev/ATLASSIAN/processJira/target/classes/com/anoop/cst/clients/SQSClientWrapper.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqsClient' defined in class path resource [com/anoop/cst/configs/DevConfig.class]: Unsatisfied dependency expressed through method 'sqsClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envConfigProperties': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'JIRA_BASE_URL' in value "${JIRA_BASE_URL}"
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqsClient' defined in class path resource [com/anoop/cst/configs/DevConfig.class]: Unsatisfied dependency expressed through method 'sqsClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envConfigProperties': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'JIRA_BASE_URL' in value "${JIRA_BASE_URL}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'envConfigProperties': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'JIRA_BASE_URL' in value "${JIRA_BASE_URL}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'JIRA_BASE_URL' in value "${JIRA_BASE_URL}"
+

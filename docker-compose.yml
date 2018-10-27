@@ -1,0 +1,16 @@
+version: "2"
+services:
+  JiraService:
+    build: ./nodeJira
+    image: cstjira
+    ports:
+      - "5000:5000"
+
+  sqs:
+    image: graze/sqs-local
+    ports:
+      - 9324:9324
+    volumes:
+      - ./elasticmq.conf:/elasticmq.conf
+      - ./sqs/queue.conf:/elasticmq.conf
+ 

@@ -15,20 +15,7 @@ import org.springframework.context.annotation.Profile;
 public class AwsConfig {
 
     @Bean
-    // @Qualifier("jira")
     public AmazonSQS sqsClient(EnvConfigProperties envConfigProperties) {
-        // String endpoint = "http://localhost:9324";
-        // String region = "elasticmq";
-        // String accessKey = "x";
-        // String secretKey = "x";
-
-        // AmazonSQS client = AmazonSQSClientBuilder.standard()
-        // .withCredentials(new AWSStaticCredentialsProvider(new
-        // BasicAWSCredentials(accessKey, secretKey)))
-        // .withEndpointConfiguration(new
-        // AwsClientBuilder.EndpointConfiguration(endpoint, region)).build();
-
-        // return client;
         AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
         return sqs;
     }

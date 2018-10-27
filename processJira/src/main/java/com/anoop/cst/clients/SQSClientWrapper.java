@@ -17,19 +17,12 @@ import org.springframework.stereotype.Component;
 public class SQSClientWrapper {
 
     private final AmazonSQS amazonSQS;
-    // private static final String QUEUE_NAME = "anoop";
     private final String queueURL;
 
     @Autowired
     SQSClientWrapper(final AmazonSQS amazonSQS, final EnvConfigProperties envConfigProperties) {
         this.amazonSQS = amazonSQS;
         queueURL = envConfigProperties.getQueueURL();
-        /*
-         * try { CreateQueueResult create_result = amazonSQS.createQueue(QUEUE_NAME);
-         * queueURL = amazonSQS.getQueueUrl(QUEUE_NAME).getQueueUrl(); } catch
-         * (AmazonSQSException e) { if (!e.getErrorCode().equals("QueueAlreadyExists"))
-         * { throw e; } }
-         */
     }
 
     public void sendMessage(String message) {
