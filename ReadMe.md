@@ -1,6 +1,6 @@
 
 
-Local Development Set-up:
+## Local Development Set-up:
 
 The feature has been developed as a Spring Boot APP exposing Rest end-point at /rest/api/2/search?q={search_query}`
 
