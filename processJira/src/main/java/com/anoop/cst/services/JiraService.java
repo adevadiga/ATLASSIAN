@@ -30,7 +30,7 @@ public class JiraService {
     @Autowired
     JiraService(final EnvConfigProperties properties) {
         this.properties = properties;
-        logger.info("Initilizing JiaService API with JiraBaseURL={}", properties.jiraBaseURL);
+        logger.info("Initilizing JiaService API JiraBaseURL={}", properties.jiraBaseURL);
         Retrofit retrofit = new Retrofit.Builder().baseUrl(properties.jiraBaseURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create()).build();

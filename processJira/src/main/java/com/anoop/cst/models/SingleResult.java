@@ -3,7 +3,6 @@ package com.anoop.cst.models;
 import com.anoop.cst.exceptions.Error;
 
 public class SingleResult {
-    Object value;
     String operation;
     String code;
     String message;

@@ -3,13 +3,12 @@ package com.anoop.cst.clients;
 import java.util.List;
 
 import com.amazonaws.services.sqs.AmazonSQS;
-import com.amazonaws.services.sqs.model.AmazonSQSException;
-import com.amazonaws.services.sqs.model.CreateQueueResult;
 import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.SendMessageBatchRequest;
 import com.amazonaws.services.sqs.model.SendMessageBatchRequestEntry;
 import com.amazonaws.services.sqs.model.SendMessageRequest;
 import com.amazonaws.services.sqs.model.SendMessageResult;
+import com.anoop.cst.configs.EnvConfigProperties;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,20 +17,19 @@ import org.springframework.stereotype.Component;
 public class SQSClientWrapper {
 
     private final AmazonSQS amazonSQS;
-    private static final String QUEUE_NAME = "anoop";
-    private String queueURL;
+    // private static final String QUEUE_NAME = "anoop";
+    private final String queueURL;
 
     @Autowired
-    SQSClientWrapper(final AmazonSQS amazonSQS) {
+    SQSClientWrapper(final AmazonSQS amazonSQS, final EnvConfigProperties envConfigProperties) {
         this.amazonSQS = amazonSQS;
-        try {
-            CreateQueueResult create_result = amazonSQS.createQueue(QUEUE_NAME);
-            queueURL = amazonSQS.getQueueUrl(QUEUE_NAME).getQueueUrl();
-        } catch (AmazonSQSException e) {
-            if (!e.getErrorCode().equals("QueueAlreadyExists")) {
-                throw e;
-            }
-        }
+        queueURL = envConfigProperties.getQueueURL();
+        /*
+         * try { CreateQueueResult create_result = amazonSQS.createQueue(QUEUE_NAME);
+         * queueURL = amazonSQS.getQueueUrl(QUEUE_NAME).getQueueUrl(); } catch
+         * (AmazonSQSException e) { if (!e.getErrorCode().equals("QueueAlreadyExists"))
+         * { throw e; } }
+         */
     }
 
     public void sendMessage(String message) {

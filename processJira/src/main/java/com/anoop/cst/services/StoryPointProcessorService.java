@@ -2,6 +2,7 @@ package com.anoop.cst.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.anoop.cst.exceptions.CSTJiraException;
 import com.anoop.cst.exceptions.Error.ErrorTypeEnum;
@@ -14,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import rx.functions.Func1;
-import rx.Observable;
 
 @Component
 public class StoryPointProcessorService {
@@ -35,19 +35,22 @@ public class StoryPointProcessorService {
 
     public SingleResult transform(String query, String name) {
         logAccessInfo("transform", query, name);
+        AtomicBoolean errorState = new AtomicBoolean(false);
 
         long startTime = System.currentTimeMillis();
         List<Error> errors = new ArrayList<>();
 
-        jiraService.getTotalStoryPoints(query).retry(2).onErrorReturn((throwable) -> {
-            throw new CSTJiraException(ErrorTypeEnum.SYSTEM_ERROR, throwable.getMessage(),
-                    CSTJiraException.JIRA_SERVICE_ERROR_CODE);
-            return Observable.error(throwable);
+        jiraService.getTotalStoryPoints(query).retry(3).doOnError((throwable) -> {
+            logger.error("Error while computing Jira Story points", throwable);
+            errorState.set(true);
         }).subscribe(totalStoryPoints -> postMessageToQueue(name, totalStoryPoints));
 
         logInteraction(this.getClass().getSimpleName(), "transform", errors.isEmpty() ? "success" : "failure",
                 System.currentTimeMillis() - startTime);
 
+        if (errorState.get()) {
+            return new SingleResult("processJira", "500", "Failed to process.");
+        }
         return new SingleResult("processJira", "200", "Succesfully processed.");
     }
 
