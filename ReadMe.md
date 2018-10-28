@@ -2,9 +2,9 @@
 
 ## Running application locally:
 
-The feature has been developed as a Spring Boot APP exposing Rest end-point at /rest/api/2/search?q={search_query}`
+The feature has been developed as a Spring Boot APP exposing Rest end-point at /api/issue/sum?query={search_query}&name={descriptive_name}`
 
-http://localhost:8080/api/issue/sum?query={search_query}&name={descriptive_name}
+http://localhost:8080/api/issue/sum?query=aaa&name=bb
 
 A sample Node JS server is run as mock Jira end-point locally.
 graze/sqs-local is run as as mock SQS end-point.
@@ -19,7 +19,9 @@ Both are run as docker containers.
                 atlassian_JiraService_1
 
 4. Start Spring Boot App
-    mvn spring-boot:run -Dspring.profiles.active=default -DJIRA_BASE_URL=http://localhost:5000 -          DQUEUE_URL=http://localhost:9324
+
+            mvn spring-boot:run -Dspring.profiles.active=default
+              -DJIRA_BASE_URL=http://localhost:5000 -DQUEUE_URL=http://localhost:9324
 
 
 
