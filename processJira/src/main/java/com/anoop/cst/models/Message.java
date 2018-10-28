@@ -29,4 +29,8 @@ public class Message {
         Message m1 = (Message) obj;
         return Objects.equals(name, m1.getName()) && totalPoints == m1.getTotalPoints();
     }
+
+    public String toString() {
+        return "{" + this.name + "," + this.totalPoints + "}";
+    }
 }

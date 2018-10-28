@@ -32,7 +32,7 @@ public class SQSService {
     public void putMessage(Message message) {
         logger.info("Invoking SQS API with message={}", message);
         sqsClient.sendMessage(getJsonMessageString(message));
-        sqsClient.recieveMessage();
+        // sqsClient.recieveMessage();
     }
 
     public void putMessageAsync(Message message) {
