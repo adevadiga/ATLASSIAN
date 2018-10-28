@@ -11,6 +11,5 @@ services:
     ports:
       - 9324:9324
     volumes:
-      - ./elasticmq.conf:/elasticmq.conf
       - ./sqs/queue.conf:/elasticmq.conf
  
