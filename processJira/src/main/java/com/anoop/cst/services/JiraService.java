@@ -44,8 +44,8 @@ public class JiraService {
                 .map(jiraIssue -> jiraIssue.getFields().getStoryPoints()).reduce((sum, storyPoint) -> sum + storyPoint);
     }
 
-    Observable<List<JiraIssue>> getIssues(String query) throws IOException {
-        Observable<List<JiraIssue>> repos = jiraBasicAPI.getIssues(query).asObservable();
-        return repos;
+    Observable<Integer> getTotalStoryPoints(String query, int offset, int limit) {
+        // Paginate and query data.
+        return null;
     }
 }
