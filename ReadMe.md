@@ -21,9 +21,9 @@ Both are run as docker containers.
 
 
 
-Spring profile is being used to run different environment set-up.
+In order to segregate parts of application configuration and make it be available only in certain environments spring profiles are used.
 Spring profile "default" assumes locally running Jira and SQS service.
-Where as Spring profile "prod" runs as a prod environment set-up.
+Where as Spring profile "prod" assumes working Jira & SQS QueueUrl end-point.
 
 
 ## Running application as in prod:
