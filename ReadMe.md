@@ -19,7 +19,8 @@ Both are run as docker containers.
                 atlassian_JiraService_1
 
 4. Start Spring Boot App
-            mvn spring-boot:run -Dspring.profiles.active=default -DJIRA_BASE_URL=http://localhost:5000 -DQUEUE_URL=http://localhost:9324
+            mvn spring-boot:run -Dspring.profiles.active=default
+              -DJIRA_BASE_URL=http://localhost:5000 -DQUEUE_URL=http://localhost:9324
 
 
 
